@@ -76,19 +76,24 @@ setCookie("token", authToken, { path: "/" });
 ## 💻 Installation & Running
 
 1️⃣ Backend
-cd backend
-npm install
-npm start
+- cd backend
+- npm install
+- npm start
 
 2️⃣ Frontend
-cd frontend
-npm install
-npm start
+- cd frontend
+- npm install
+- npm start
 
 3️⃣ Dashboard
-cd dashboard
-npm install
-npm start
+- cd dashboard
+- npm install
+- npm start
+
+**Open your browser:**
+Frontend: http://localhost:3000
+Dashboard: http://localhost:3001
+Backend API: http://localhost:3002
 
 **🛠️ Tech Stack**
 | Layer           | Technologies                                                            |
