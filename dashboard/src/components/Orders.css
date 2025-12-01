@@ -1,0 +1,101 @@
+.orders-page {
+  width: 90%;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Empty State Zerodha Style */
+.empty-state {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.empty-state img {
+  width: 180px;
+  opacity: 0.8;
+}
+
+.empty-state p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  color: #555;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  background: #387ed1;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background: #2563a0;
+}
+
+/* Table Styling */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  margin-top: 40px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.orders-table thead {
+  background: rgb(238, 236, 237);
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 16px 20px;
+  font-size: 0.95rem;
+  text-align: left;
+  color: #333;
+}
+
+.orders-table tr {
+  transition: background 0.2s;
+}
+
+.orders-table tr:hover {
+  background: #f1f7ff;
+}
+
+/* Instrument column */
+.instrument {
+  font-weight: 600;
+  color: #222;
+}
+
+/* Buy / Sell Badge */
+.badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.buyOrder {
+  background: rgba(0, 200, 0, 0.12);
+  color: #0f9d58;
+}
+
+.sellOrder {
+  background: rgba(255, 0, 0, 0.12);
+  color: #d93025;
+}
+
+/* Smooth fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

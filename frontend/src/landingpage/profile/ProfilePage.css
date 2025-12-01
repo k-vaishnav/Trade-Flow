@@ -1,0 +1,18 @@
+.profile-container {
+  max-width: 550px;
+  margin: auto;
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #4a90e2;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin: auto;
+}
