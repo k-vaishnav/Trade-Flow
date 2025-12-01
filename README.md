@@ -122,21 +122,21 @@ Backend API: http://localhost:3002
 
 **📌 Skills Demonstrated**
 
-> Full-stack development (React + Node.js + MongoDB)
+- Full-stack development (React + Node.js + MongoDB)
 
-> JWT-based authentication & protected routes
+- JWT-based authentication & protected routes
 
-> API development & integration
+- API development & integration
 
-> MongoDB data modeling with Mongoose
+- MongoDB data modeling with Mongoose
 
-> State management with cookies
+- State management with cookies
 
-> Interactive charts & data visualization
+- Interactive charts & data visualization
 
-> Responsive UI with React
+- Responsive UI with React
 
-> Git & GitHub workflow
+- Git & GitHub workflow
 
 **📄 License **
 MIT License – Open-source
