@@ -1,9 +1,11 @@
 # 🚀 TradeFlow – Full-Stack Trading Platform (MERN)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/tradeflow?style=social)](https://github.com/yourusername/tradeflow/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/yourusername/tradeflow)](https://github.com/yourusername/tradeflow/issues)
+[![GitHub stars](https://img.shields.io/github/stars/k-vaishnav/Trade-Flow?style=social)](https://github.com/k-vaishnav/Trade-Flow/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/k-vaishnav/Trade-Flow?style=social)](https://github.com/k-vaishnav/Trade-Flow/network)
+[![GitHub issues](https://img.shields.io/github/issues/k-vaishnav/Trade-Flow)](https://github.com/k-vaishnav/Trade-Flow/issues)
+[![License](https://img.shields.io/github/license/k-vaishnav/Trade-Flow)](https://github.com/k-vaishnav/Trade-Flow/blob/main/LICENSE)
 
+---
 TradeFlow is a **full-stack stock trading platform** inspired by real brokerage systems.  
 It features a **React landing app**, a **React dashboard**, and a **Node.js + Express backend** with secure authentication, portfolio APIs, and modular architecture.
 
