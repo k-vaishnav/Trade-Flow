@@ -72,6 +72,9 @@ const [cookies, setCookie, removeCookie] = useCookies(["token"]);
 setCookie("token", authToken, { path: "/" });
 ```
 ▶️ Running the Project Locally
+
+## 💻 Installation & Running
+
 1️⃣ Backend
 cd backend
 npm install
