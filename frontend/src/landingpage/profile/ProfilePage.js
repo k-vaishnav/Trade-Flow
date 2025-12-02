@@ -1,11 +1,9 @@
 import react from "react";
 import axios from "axios";
-import { useCookies } from "react-cookie";
 import { useUser } from "../../context/AuthProvider";
 
 
 const ProfilePage = () => {
-  const [cookies, removeCookie] = useCookies(["jwtToken"]);
   const { user,setUser } = useUser();
   if (!user) {
     return <h2>Loading...</h2>;
@@ -15,7 +13,7 @@ const ProfilePage = () => {
     await axios.get("http://localhost:3002/users/logout", {
       withCredentials: true,
     });
-    removeCookie("jwtToken", { path: "/" });
+
     setUser(null);
     window.location.href = "/";
   };

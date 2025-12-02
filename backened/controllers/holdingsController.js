@@ -138,7 +138,6 @@ const addHoldings = (req, res) => {
 
 const allHoldings = async (req, res) => {
   try {
-    console.log("Getting all holdings");
     return res.status(200).json(await getAllHoldings());
   } catch (err) {
     return res.status(500).send("Server Error");

@@ -1,21 +1,18 @@
-import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useCookies } from "react-cookie";
+
 import { useUser } from "../context/AuthProvider";
 
 import axios from "axios";
-import { use } from "react";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const [cookies, removeCookie] = useCookies(["jwtToken"]);
+
   const { user, setUser } = useUser();
 
   const logOut = async () => {
     await axios.get("http://localhost:3002/users/logout", {
       withCredentials: true,
     });
-    removeCookie("jwtToken", { path: "/" });
     setUser(null);
     navigate("/");
   };

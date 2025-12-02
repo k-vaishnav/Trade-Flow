@@ -8,7 +8,7 @@ const Holdings = () => {
 
   useEffect(() => {
     try {
-      axios.get(URL).then((res) => {
+      axios.get(URL, { withCredentials: true }).then((res) => {
         console.log(res.data);
         setAllHoldings(res.data);
       });

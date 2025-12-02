@@ -22,10 +22,10 @@ export const signup = async (req, res, next) => {
     );
 
     res.cookie("jwtToken", token, {
-      httpOnly: false,
+      httpOnly: true,
       path: "/",
       sameSite: "lax",
-      secure: false,
+      secure: process.env.NODE_ENV === "production",
       maxAge: 1 * 24 * 60 * 60 * 1000,
     });
     return res
@@ -51,10 +51,10 @@ export const login = async (req, res, next) => {
           { expiresIn: "1d" }
         );
         res.cookie("jwtToken", token, {
-          httpOnly: false,
+          httpOnly: true,
           path: "/",
           sameSite: "lax",
-          secure: false,
+          secure: process.env.NODE_ENV === "production",
           maxAge: 1 * 24 * 60 * 60 * 1000,
         });
         return res

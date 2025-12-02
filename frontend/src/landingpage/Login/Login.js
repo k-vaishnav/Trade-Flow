@@ -4,7 +4,6 @@ import axios from "axios"
 import {toast} from "react-toastify"
 import { useUser } from '../../context/AuthProvider';
 
-
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -96,7 +95,7 @@ const Login = () => {
 
             <p class="text-center mt-3">
               Don’t have an account?
-              <Link to="/signup">Sign Up</Link>
+              <Link to="/signup" className="btn btn-warning text-center text-white ms-2 ">Sign Up</Link>
             </p>
           </form>
 

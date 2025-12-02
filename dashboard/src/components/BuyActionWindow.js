@@ -14,7 +14,7 @@ const BuyActionWindow = ({ uid }) => {
       qty: stockQuantity,
       price: stockPrice,
       mode: "BUY",
-    }).then(()=>{
+    },{withCredentials: true}).then(()=>{
       return axios.post("http://localhost:3002/holdings/newHolding", {
       name: uid,
       qty: stockQuantity,
@@ -23,7 +23,7 @@ const BuyActionWindow = ({ uid }) => {
       net: "0%",
       day: "0%",
       isLoss: false
-      })
+      },{withCredentials: true}).catch((err)=>console.log(err))
     }).finally(() => closeBuyWindow());
   };
 

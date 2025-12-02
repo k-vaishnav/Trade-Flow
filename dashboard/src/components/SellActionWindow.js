@@ -14,12 +14,12 @@ const SellActionWindow = ({ uid }) => {
       qty: stockQuantity,
       price: stockPrice,
       mode: "SELL",
-    }).then(()=>{
+    },{withCredentials: true}).then(()=>{
       return axios.post("http://localhost:3002/holdings/sellHolding", {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,
-      })
+      },{withCredentials: true}).catch((err)=>console.log(err))
   }).finally(() => closeBuyWindow());
   };
 

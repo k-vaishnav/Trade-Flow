@@ -1,12 +1,12 @@
 import { AuthContext } from "./AuthContext";
-import { useContext,useState,useEffect } from "react";
-import { useCookies } from "react-cookie";
-import axios from "axios";
+import { useContext,useState } from "react";
+// import { useCookies } from "react-cookie";
+// import axios from "axios";
 const AuthProvider = ({children}) => {
-    const [cookies,removeCookie] = useCookies(["jwtToken"]);
+    // const [cookies,removeCookie] = useCookies(["jwtToken"]);
     const [user,setUser] = useState(null);
 
-    useEffect(() =>{
+   {/* useEffect(() =>{
         const verifyUser = async () =>{
             try{
                 const {data} = await axios.get("http://localhost:3002/users/verify",{withCredentials:true});
@@ -21,7 +21,7 @@ const AuthProvider = ({children}) => {
             }
         }
         verifyUser();
-    },[cookies.jwtToken])
+    },[cookies.jwtToken])*/}  // used fro not httponly cookie handling
 
     return <AuthContext.Provider value ={{user,setUser}}>{children}</AuthContext.Provider>;
 }

@@ -10,8 +10,10 @@ userRouter.get("/verify", authMiddleware, (req, res) => {
 });
 userRouter.get("/logout", (req, res) => {
   res.clearCookie("jwtToken", {
-    httpOnly: false,
+    httpOnly: true,
     path: "/",
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "lax",
   });
   res.json({ status: true, message: "Logged out" });
 });
