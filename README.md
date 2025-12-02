@@ -15,9 +15,13 @@ It features a **React landing app**, a **React dashboard**, and a **Node.js + Ex
 
 ### 🔐 Authentication
 - JWT-based authentication
-- Secure cookies using **react-cookie**
+- HttpOnly secure authentication cookies
 - Password hashing with **bcryptjs**
 - Protected backend routes
+
+ ### ⚠️ Note:
+Authentication uses HttpOnly cookies (more secure), so the token cannot be accessed via JavaScript or react-cookie.
+react-cookie is only used for non-sensitive UI preferences.
 
 ### 📊 Trading Dashboard
 - Portfolio overview: **Holdings, Positions, Orders, Funds**
@@ -27,14 +31,15 @@ It features a **React landing app**, a **React dashboard**, and a **Node.js + Ex
 ### ⚙️ Backend API
 - Modular controllers & routes
 - MongoDB + Mongoose models
-- Error-handling middleware
+- Centralized error handler
 - CORS configured for multiple origins
+- Token verification middleware
 
 ### 🎨 Landing Frontend
 - Signup & Login
 - Toast notifications with **react-toastify**
 - Axios for API calls
-- Cookie-based user session handling
+- Cookie-based session (Http only)
 
 ---
 
@@ -56,21 +61,25 @@ tradeflow/
 
 ---
 
-## 🍪 React Cookies Usage
+### 🍪 Cookie Strategy (Important)
 
-Cookies are used for handling:
+TradeFlow uses cookies for :
 
-- JWT tokens
-- Auto-login sessions
-- Protecting dashboard routes
-- Logging out users safely  
+✔ 1. HttpOnly Authentication Cookie
 
-Example:
+Used for:
+- Session persistence
+- /verify route
+- Protected dashboard access
 
-```js
-const [cookies, setCookie, removeCookie] = useCookies(["token"]);
-setCookie("token", authToken, { path: "/" });
+This cookie **cannot be accessed by JavaScript** (more secure).
+It is sent automatically through axios when using:
 ```
+js
+axios.get("/users/verify", { withCredentials: true });
+
+```
+
 ▶️ Running the Project Locally
 
 ## 💻 Installation & Running
@@ -98,7 +107,7 @@ Backend API: http://localhost:3002
 **🛠️ Tech Stack**
 | Layer           | Technologies                                                            |
 | --------------- | ----------------------------------------------------------------------- |
-| Frontend        | React.js, React Router, Axios, react-cookie, react-toastify, Chart.js   |
+| Frontend        | React.js, React Router, Axios, react-cookie(UI only), react-toastify, Chart.js   |
 | Backend         | Node.js, Express, MongoDB, Mongoose, JWT, bcryptjs, cookie-parser, CORS |
 | Testing         | Jest, ThunderClient                                                     |
 | Version Control | Git, GitHub                                                             |
