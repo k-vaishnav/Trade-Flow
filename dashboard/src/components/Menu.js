@@ -2,24 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const Menu = () => {
+const Menu = ({user,setUser}) => {
   const [selectedMenu, setSelectedMenu] = useState(0);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    const checkAuth = () => {
-      axios
-        .get("http://localhost:3002/users/verify", { withCredentials: true })
-        .then((res) => setUser(res.data.user))
-        .catch(() => {
-          // Token invalid → return to login page
-          window.location.href = "http://localhost:3000";
-        });
-    };
-    checkAuth();
-  }, []);
-
+  
   const handleMenuClick = (index) => {
     setSelectedMenu(index);
   };
@@ -57,6 +43,7 @@ const Menu = () => {
               style={{ textDecoration: "none" }}
               to="/"
               onClick={() => handleMenuClick(0)}
+             
             >
               <p className={selectedMenu === 0 ? activeMenuClass : menuClass}>
                 Dashboard
