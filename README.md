@@ -7,7 +7,7 @@
 
 ---
 TradeFlow is a **full-stack stock trading platform** inspired by real brokerage systems.  
-It features a **React landing app**, a **React dashboard**, and a **Node.js + Express backend** with secure authentication, portfolio APIs, and modular architecture.
+It features a **React landing app**, a **React dashboard**, and a **Node.js + Express backend** with secure authentication, and a local AI assistant for trading guidance.
 
 ---
 
@@ -26,7 +26,15 @@ react-cookie is only used for non-sensitive UI preferences.
 ### 📊 Trading Dashboard
 - Portfolio overview: **Holdings, Positions, Orders, Funds**
 - Interactive charts (Pie/Bar) using **Chart.js**
+- Buy/Sell Orders (virtual trading)
 - Clean and reusable UI components
+
+### 🤖 Local AI Assistant
+- Fully client-side AI assistant using WebLLM
+- Users can ask questions about stocks, trading terms, and indicators
+- Works with or without login
+- Typing animation and clear, concise responses
+- Safe: never gives personal financial advice
 
 ### ⚙️ Backend API
 - Modular controllers & routes
@@ -40,7 +48,7 @@ react-cookie is only used for non-sensitive UI preferences.
 - Toast notifications with **react-toastify**
 - Axios for API calls
 - Cookie-based session (Http only)
-
+- AI Assistant
 ---
 
 ## 📁 Project Structure
@@ -107,7 +115,7 @@ Backend API: http://localhost:3002
 **🛠️ Tech Stack**
 | Layer           | Technologies                                                            |
 | --------------- | ----------------------------------------------------------------------- |
-| Frontend        | React.js, React Router, Axios, react-cookie(UI only), react-toastify, Chart.js   |
+| Frontend        | React.js, React Router, Axios, react-cookie(UI only), react-toastify, Chart.js, WebLLM (AI Assistant)   |
 | Backend         | Node.js, Express, MongoDB, Mongoose, JWT, bcryptjs, cookie-parser, CORS |
 | Testing         | Jest, ThunderClient                                                     |
 | Version Control | Git, GitHub                                                             |
@@ -146,6 +154,11 @@ Backend API: http://localhost:3002
 - Responsive UI with React
 
 - Git & GitHub workflow
+
+- Client-side AI integration (WebLLM)
+  
+- AI-driven user guidance and explanation
+
 
 **📄 License **
 MIT License – Open-source
