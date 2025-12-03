@@ -29,7 +29,7 @@ react-cookie is only used for non-sensitive UI preferences.
 - Buy/Sell Orders (virtual trading)
 - Clean and reusable UI components
 
-  ### 🤖 Local AI Assistant
+### 🤖 Local AI Assistant
 - Fully client-side AI assistant using WebLLM
 - Users can ask questions about stocks, trading terms, and indicators
 - Works with or without login
