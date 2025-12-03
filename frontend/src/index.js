@@ -16,6 +16,7 @@ import { ToastContainer } from "react-toastify";
 import { CookiesProvider } from "react-cookie";
 import ProfilePage from "./landingpage/profile/ProfilePage";
 import AuthProvider from "./context/AuthProvider";
+import ChatBotButton from "./landingpage/ChatBotButton";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -35,6 +36,7 @@ root.render(
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <ChatBotButton />
           <Footer />
         </AuthProvider>
       </CookiesProvider>
