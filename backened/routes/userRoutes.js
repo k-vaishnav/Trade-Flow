@@ -12,8 +12,8 @@ userRouter.get("/logout", (req, res) => {
   res.clearCookie("jwtToken", {
     httpOnly: true,
     path: "/",
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
+    secure: true,
+    sameSite: "none",
   });
   res.json({ status: true, message: "Logged out" });
 });

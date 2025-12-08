@@ -12,6 +12,7 @@ import orderRouter from "./routes/orderRoutes.js";
 import userRouter from "./routes/userRoutes.js";
 const app = express();
 // app.use(cors());
+app.set("trust proxy", 1); 
 const allowedOrigins = [
   "https://trade-flow-frontend.onrender.com",
   "https://trade-flow-dashboard-fhaz.onrender.com"

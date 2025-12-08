@@ -23,14 +23,14 @@ export const signup = async (req, res, next) => {
 
     res.cookie("jwtToken", token, {
       httpOnly: true,
+      secure: true, // Always true on Render
+      sameSite: "none", // Required for cross-domain cookies
       path: "/",
-      sameSite: "lax",
-      secure: process.env.NODE_ENV === "production",
       maxAge: 1 * 24 * 60 * 60 * 1000,
     });
     return res
       .status(200)
-      .json({ message: "User created successfully", success: true ,user});
+      .json({ message: "User created successfully", success: true, user });
   } catch (e) {
     next(e);
   }
@@ -52,14 +52,16 @@ export const login = async (req, res, next) => {
         );
         res.cookie("jwtToken", token, {
           httpOnly: true,
+          secure: true, // Always true on Render
+          sameSite: "none", // Required for cross-domain cookies
           path: "/",
-          sameSite: "lax",
-          secure: process.env.NODE_ENV === "production",
           maxAge: 1 * 24 * 60 * 60 * 1000,
         });
-        return res
-          .status(200)
-          .json({ message: "User logged in successfully", success: true ,user});
+        return res.status(200).json({
+          message: "User logged in successfully",
+          success: true,
+          user,
+        });
       }
     }
   } catch (e) {
