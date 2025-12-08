@@ -3,7 +3,7 @@ import axios from "axios";
 // import { positions } from "../data/data";
 
 
-const URL = "http://localhost:3002/positions/allPositions";
+const URL = "https://trade-flow-qzb2.onrender.com/positions/allPositions";
 
 const Positions = () => {
   const [allPositions, setAllPositions] = useState([]);

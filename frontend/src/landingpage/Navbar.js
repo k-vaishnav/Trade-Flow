@@ -10,7 +10,7 @@ const Navbar = () => {
   const { user, setUser } = useUser();
 
   const logOut = async () => {
-    await axios.get("http://localhost:3002/users/logout", {
+    await axios.get("https://trade-flow-qzb2.onrender.com/users/logout", {
       withCredentials: true,
     });
     setUser(null);
@@ -111,7 +111,7 @@ const Navbar = () => {
                     <li>
                       <a
                         className="dropdown-item"
-                        href="http://localhost:3001"
+                        href="https://trade-flow-dashboard-fhaz.onrender.com"
                         target="_blank"
                       >
                         Dashboard

@@ -13,8 +13,8 @@ import userRouter from "./routes/userRoutes.js";
 const app = express();
 // app.use(cors());
 const allowedOrigins = [
-  "http://localhost:3000",
-  "http://localhost:3001"
+  "https://trade-flow-frontend.onrender.com",
+  "https://trade-flow-dashboard-fhaz.onrender.com"
 ];
 app.use(
   cors({

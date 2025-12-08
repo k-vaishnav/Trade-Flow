@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     const checkAuth = () => {
       axios
-        .get("http://localhost:3002/users/verify", { withCredentials: true })
+        .get("https://trade-flow-qzb2.onrender.com/users/verify", { withCredentials: true })
         .then((res) => setUser(res.data.user))
         .catch(() => {
           // Token invalid → return to login page

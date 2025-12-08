@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios, { all } from "axios";
 import { VerticalGraph } from "./VerticalGraph";
 // import { holdings } from "../data/data";
-const URL = "http://localhost:3002/holdings/allHoldings";
+const URL = "https://trade-flow-qzb2.onrender.com/holdings/allHoldings";
 const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 

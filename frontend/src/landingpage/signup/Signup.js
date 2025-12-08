@@ -40,7 +40,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/users/signup",
+        "https://trade-flow-qzb2.onrender.com/users/signup",
         { name, email, DOB, password },
         { withCredentials: true }
       );

@@ -12,7 +12,7 @@ const Menu = ({user,setUser}) => {
 
   const handleLogout = () => {
     axios
-      .get("http://localhost:3002/users/logout", { withCredentials: true })
+      .get("https://trade-flow-qzb2.onrender.com/users/logout", { withCredentials: true })
       .then((res) => {
         console.log(res.data);
         setUser(null);

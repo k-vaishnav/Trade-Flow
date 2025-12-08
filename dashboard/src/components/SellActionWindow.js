@@ -9,13 +9,13 @@ const SellActionWindow = ({ uid }) => {
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const handleSellClick = (uid) => {
-    axios.post("http://localhost:3002/orders/newOrder", {
+    axios.post("https://trade-flow-qzb2.onrender.com/orders/newOrder", {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,
       mode: "SELL",
     },{withCredentials: true}).then(()=>{
-      return axios.post("http://localhost:3002/holdings/sellHolding", {
+      return axios.post("https://trade-flow-qzb2.onrender.com/holdings/sellHolding", {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,

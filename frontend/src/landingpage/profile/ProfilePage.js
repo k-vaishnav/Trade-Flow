@@ -10,7 +10,7 @@ const ProfilePage = () => {
   }
   const avatarLetter = user.name ? user.name.charAt(0).toUpperCase() : "?";
   const logoutAll = async () => {
-    await axios.get("http://localhost:3002/users/logout", {
+    await axios.get("https://trade-flow-qzb2.onrender.com/users/logout", {
       withCredentials: true,
     });
 

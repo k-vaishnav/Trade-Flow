@@ -36,7 +36,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const {data} = await axios.post("http://localhost:3002/users/login", { email, password },{withCredentials: true});
+      const {data} = await axios.post("https://trade-flow-qzb2.onrender.com/users/login", { email, password },{withCredentials: true});
       const {success , message} = data;
       if(success){
         setUser(data.user);
