@@ -13,7 +13,7 @@ const Home = () => {
         .then((res) => setUser(res.data.user))
         .catch(() => {
           // Token invalid → return to login page
-          window.location.href = "http://localhost:3000";
+          window.location.href = "https://trade-flow-frontend.onrender.com";
         });
     };
     checkAuth();

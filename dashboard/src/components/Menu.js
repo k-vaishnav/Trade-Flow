@@ -16,11 +16,11 @@ const Menu = ({user,setUser}) => {
       .then((res) => {
         console.log(res.data);
         setUser(null);
-        window.location.href = "http://localhost:3000/"; // Login page app
+        window.location.href = "https://trade-flow-frontend.onrender.com/"; // Login page app
       })
       .catch((err) => {
         if(err.response?.status === 401){
-          window.location.href = "http://localhost:3000/"; // Login page app
+          window.location.href = "https://trade-flow-frontend.onrender.com/"; // Login page app
         }
       });
   };
