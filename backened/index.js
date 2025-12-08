@@ -39,6 +39,9 @@ app.use("/holdings", router);
 app.use("/positions", positionRouter);
 app.use("/orders", orderRouter);
 app.use("/users", userRouter);
+app.get("/", (req, res)=>{
+  res.send("Hey i am root !")
+})
 
 app.use((err, req, res, next) => {
   console.log(err);
