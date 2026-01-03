@@ -11,6 +11,14 @@ It features a **React landing app**, a **React dashboard**, and a **Node.js + Ex
 
 ---
 
+## 🌐 Live Demo:
+- Frontend: https://trade-flow-frontend.onrender.com
+- Dashboard: https://trade-flow-dashboard-fhaz.onrender.com
+
+## ⚠️ Backend is hosted on Render free tier.
+Initial requests may take 20–30 seconds due to cold start.
+
+
 ## 🌟 Features
 
 ### 🔐 Authentication
