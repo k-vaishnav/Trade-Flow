@@ -37,6 +37,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const {data} = await axios.post("https://trade-flow-qzb2.onrender.com/users/login", { email, password },{withCredentials: true});
+      console.log(email,password);
       const {success , message} = data;
       if(success){
         setUser(data.user);

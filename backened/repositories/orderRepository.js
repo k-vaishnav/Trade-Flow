@@ -14,3 +14,11 @@ export const addOrder = async (data) =>{
 export const getOrders = async () =>{
     return await OrderModel.find({});
 }
+
+export const updateOrderById = async (id,data) =>{
+    return await OrderModel.findByIdAndUpdate(id,data,{new:true});
+}
+
+export const deleteOrderById = async (id) =>{
+    return await OrderModel.findByIdAndDelete(id);
+}

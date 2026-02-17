@@ -44,6 +44,8 @@ app.get("/", (req, res)=>{
   res.send("Hey i am root !")
 })
 
+
+
 app.use((err, req, res, next) => {
   console.log(err);
   if (err instanceof mongoose.Error.ValidationError) {

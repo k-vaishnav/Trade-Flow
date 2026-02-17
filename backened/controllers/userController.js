@@ -39,6 +39,7 @@ export const signup = async (req, res, next) => {
 export const login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
+    console.log(email, password);
     const user = await loginUser(email);
     if (!user) throw new Error("Incorrect Credentials");
     else {
