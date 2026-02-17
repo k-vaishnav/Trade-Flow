@@ -18,6 +18,27 @@ It features a **React landing app**, a **React dashboard**, and a **Node.js + Ex
 ## ⚠️ Backend is hosted on Render free tier.
 Initial requests may take 20–30 seconds due to cold start.
 
+## 🧠 How to Test the Application (Important for Reviewers)
+
+1. Visit the Live Frontend:
+   👉 https://trade-flow-frontend.onrender.com
+
+2. Register a new account or login.
+
+3. After login:
+   - Click on the profile icon (first letter of your name).
+   - Open the Dashboard.
+   - Navigate to the Orders page.
+
+4. On the Orders page you can:
+   - ➕ Add a new order (Buy shares)
+   - ✏️ Edit an order
+   - ❌ Delete an order
+   - 📄 View all existing orders
+
+✔ All CRUD operations can be tested directly from the frontend.
+
+
 
 ## 🌟 Features
 
@@ -96,7 +117,16 @@ axios.get("/users/verify", { withCredentials: true });
 
 ```
 
-▶️ Running the Project Locally
+## ▶️ Running the Project Locally
+
+
+## 🔑 Environment Variables
+
+Create a `.env` file inside the `backend` folder and add the following:
+
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+CLIENT_URL=http://localhost:3000
 
 ## 💻 Installation & Running
 
@@ -144,6 +174,8 @@ Backend API: http://localhost:3002
 | GET    | `/allPositions` | Fetch all positions |
 | POST   | `/buy`          | Place a buy order   |
 | POST   | `/sell`         | Place a sell order  |
+| PUT    | `/orders/:id`   | Update an order   |
+| DELETE | `/orders/:id`   | Delete an order   |
 
 **📌 Skills Demonstrated**
 
@@ -167,6 +199,15 @@ Backend API: http://localhost:3002
   
 - AI-driven user guidance and explanation
 
+## 🚀 Deployment
 
-**📄 License **
-MIT License – Open-source
+- Frontend: Render
+- Dashboard: Render
+- Backend: Render (Free Tier)
+- Database: MongoDB Atlas
+
+⚠️ Backend may take 20–30 seconds on first request due to cold start (Render free tier).
+
+
+## 📄 License
+This project is licensed under the MIT License.
