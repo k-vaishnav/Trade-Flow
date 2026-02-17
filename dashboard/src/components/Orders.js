@@ -31,7 +31,7 @@ const Orders = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `https://trade-flow-qzb2.onrender.com/orders/orders/${id}`,
+        `https://trade-flow-qzb2.onrender.com/orders/${id}`,
         { withCredentials: true },
       );
       fetchOrders();
